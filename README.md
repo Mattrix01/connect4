@@ -1,2 +1,2 @@
-# connent4
+# connect4
 first connect four game
