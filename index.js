@@ -4,4 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const result = document.querySelector("#result");
   const displayCurrentPlayer = document.querySelector("#current-player");
   let currentPlayer = 1;
+  // looping each square add an onclick
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].onclick = () => {
+      alert("You have clicked square " + i);
+    };
+  }
 });
