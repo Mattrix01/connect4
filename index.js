@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
           squares[i].classList.add("player-two");
           currentPlayer = 1;
           displayCurrentPlayer.innerHTML = currentPlayer;
-        } else alert("Cannot go here");
-      }
+        }
+      } else alert("Cannot go here");
     };
   }
 });
