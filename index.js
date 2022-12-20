@@ -7,13 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // looping each square add an onclick
   for (let i = 0; i < squares.length; i++) {
     squares[i].onclick = () => {
-      alert("square number " + i);
       // if the square below your current square is taken, you can go on top of it.
       if (squares[i + 7].classList.contains("taken")) {
         if (currentPlayer == 1) {
           squares[i].classList.add("taken");
           squares[i].classList.add("player-one");
           currentPlayer = 2;
+          displayCurrentPlayer.innerHTML = currentPlayer;
+        }
+        // same as above but for player 2
+        if (currentPlayer == 2) {
+          squares[i].classList.add("taken");
+          squares[i].classList.add("player-two");
+          currentPlayer = 1;
           displayCurrentPlayer.innerHTML = currentPlayer;
         }
       }
